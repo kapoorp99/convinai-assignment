@@ -3,21 +3,10 @@ import {
     Avatar,
     Box,
     Text,
-    Stack,
-    Button,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { useDispatch } from 'react-redux';
-import { fetchUser } from '../redux/reducers/userSlice';
-import {useNavigate} from 'react-router-dom';
 
 export default function SingleUser(props) {
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const getUserDetails = (userid) => {
-        dispatch(fetchUser(userid))
-        navigate(`/users/${userid}`)
-    }
     return (
         <Box
             maxW={'300px'}
