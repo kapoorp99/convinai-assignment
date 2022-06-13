@@ -12,6 +12,7 @@ function Home() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchUsers())
+    //eslint-disable-next-line
   }, [])
   return (
     <Stack justifyContent='center' alignItems='center' direction={{ base: 'column', md: 'row' }}
